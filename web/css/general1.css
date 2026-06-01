@@ -1,0 +1,334 @@
+/* Establece el estilo basico para html y body */
+html, body {
+    height: 100%;
+    margin: 0; 
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Estilos para el contenido principal */
+main {
+    flex: 1; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+/* Contenedor principal con fondo semitransparente */
+.main-container {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    text-align: center; /* Centrar el texto */
+    max-width: none; 
+    width: 80%; 
+    margin: auto; 
+    flex-grow: 1; 
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
+    margin-top: 20px; 
+}
+
+/* Estilos adicionales para los formularios y inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo para el boton de submit */
+form input[type="submit"] {
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049; /* Efecto al pasar el cursor */
+}
+
+input.error {
+    border: solid 1px red;
+}
+input.ok {
+    border: solid 1px green;
+    background-color: darkseagreen;
+}
+
+/* Estilos para el contenedor de los botones */
+.acciones {
+    display: flex; 
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #f0f0f0; /* Gris claro */
+    color: black;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para todos los botones */
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo para el boton de Modificar */
+button.modify-button {
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+}
+
+button.modify-button:hover {
+    background-color: #0056b3; /* Azul mas oscuro */
+}
+
+/* Estilo para el boton de Eliminar  */
+button.delete-button {
+    background-color: #f44336; /* Rojo */
+    color: white;
+    border: none;
+}
+
+button.delete-button:hover {
+    background-color: #d32f2f; /* Rojo mas oscuro */
+}
+
+
+/* Estilo para el contenedor de errores */
+.error-container {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 30px; 
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    color: red; 
+    font-weight: bold;
+    text-align: center; 
+    width: 80%; 
+    margin: auto;
+}
+
+/* Estilo para el mensaje de error */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Estilo para el menu de navegacion */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    background-color: #000; /* Fondo negro */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: white; 
+}
+
+nav ul li:hover > a {
+    background-color: #444; /* Gris oscuro */
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333; /* Fondo gris oscuro */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 200px;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    color: white;
+    background-color: #333;
+}
+
+nav ul li ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #007bff; /* Azul*/
+    color: white; 
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Contenedor de la tabla con barra de desplazamiento */
+.table-responsive {
+    overflow-x: auto; /* Agrega barra de desplazamiento horizontal */
+    max-width: 100%; /* Limita el ancho para evitar que se salga del contenedor */
+    -webkit-overflow-scrolling: touch; /* Mejoramos la experiencia en dispositivos tactiles */
+}
+
+/* Estilo para las celdas de la tabla */
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+table tr:nth-child(odd) {
+    background-color: #cce5ff;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffcc;
+}
+
+table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo para la imagen de perfil en la tabla */
+.profile-preview {
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    border-radius: 50%; /* Imagen redonda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+/* Contenedor para la imagen de perfil */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #007bff;
+}
+
+/* Imagen de perfil */
+.profile-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container img:hover {
+    transform: scale(1.1); /* Ampliar ligeramente al pasar el cursor */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Input de archivo */
+.profile-container input[type="file"] {
+    display: none;
+}
+
+/* Estilo para el boton de carga de nueva imagen */
+.profile-container label {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.profile-container label:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* Estilo especifico para el boton de Desapuntarse (color amarillo) */
+button.dynamic-button {
+    background-color: #ffcc00; /* Amarillo */
+    color: black; /* Texto negro */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Efecto al pasar el cursor */
+}
+
+button.dynamic-button:hover {
+    background-color: #e6b800; /* Amarillo mas oscuro al pasar el cursor */
+}
+button.green-button {
+    background-color: #4CAF50; /* Color verde */
+    color: white; /* Texto blanco */
+    border: none; 
+    border-radius: 4px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+button.green-button:hover {
+    background-color: #45a049; /* Verde mas oscuro al pasar el cursor */
+}
