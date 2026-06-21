@@ -27,7 +27,7 @@ import java.util.List;
 @MultipartConfig
 public class UsuarioController extends HttpServlet {
 
-    @PersistenceContext(unitName = "AgendaPU")
+    @PersistenceContext(unitName = "GymPU")
     private EntityManager em;
     @Resource
     private UserTransaction utx;

@@ -21,7 +21,7 @@ import java.util.List;
 @WebServlet(name = "CarritoController", urlPatterns = {"/carrito", "/agregarCarrito", "/eliminarCarrito", "/inscribirseCarrito"})
 public class CarritoController extends HttpServlet {
 
-    @PersistenceContext(unitName = "AgendaPU")
+    @PersistenceContext(unitName = "GymPU")
     private EntityManager em;
     @Resource
     private UserTransaction utx;

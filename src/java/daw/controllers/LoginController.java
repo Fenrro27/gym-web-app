@@ -25,7 +25,7 @@ import java.util.Date;
 @MultipartConfig
 public class LoginController extends HttpServlet {
 
-    @PersistenceContext(unitName = "AgendaPU")
+    @PersistenceContext(unitName = "GymPU")
     private EntityManager em;
     @Resource
     private UserTransaction utx;

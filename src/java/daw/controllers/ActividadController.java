@@ -21,7 +21,7 @@ import java.util.List;
 @WebServlet(name = "ActividadController", urlPatterns = {"/crearActividad", "/modificarActividad", "/catalogoActividades", "/actividadesInscritas", "/vistaActividad", "/eliminarActividad", "/desapuntarseActividad"})
 public class ActividadController extends HttpServlet {
 
-    @PersistenceContext(unitName = "AgendaPU")
+    @PersistenceContext(unitName = "GymPU")
     private EntityManager em;
     @Resource
     private UserTransaction utx;

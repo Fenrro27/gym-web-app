@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  gym-web-app:
+    build: .
+    container_name: gym_glassfish_derby
+    ports:
+      - "8080:8080"
+      - "8181:8181"
+      - "4848:4848"
+      - "1527:1527"
+    volumes:
+      # Montamos la base de datos Derby para que persista entre reinicios
+      - derby_data:/opt/glassfish7/databases
+    restart: unless-stopped
+
+volumes:
+  derby_data:

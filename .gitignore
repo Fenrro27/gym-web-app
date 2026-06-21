@@ -28,3 +28,15 @@ replay_pid*
 build/
 dist/
 nbproject/
+
+# Docker volumes
+derby_data/
+
+# IDEs adicionales
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
